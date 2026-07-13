@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rally Connect Input CSV Maker</title>
+  <meta name="description" content="Download Rally Connect Input CSV Maker for macOS.">
+  <style>
+    :root {
+      --bg: #f4f8f6;
+      --surface: #ffffff;
+      --surface-soft: #ecf6f4;
+      --ink: #16302d;
+      --muted: #5f6f6b;
+      --line: #c8ddd7;
+      --teal: #087f7a;
+      --teal-dark: #055d59;
+      --gold: #d89b21;
+      --green: #116a46;
+      --shadow: 0 22px 60px rgba(17, 67, 62, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(8, 127, 122, 0.12), transparent 42%),
+        linear-gradient(180deg, #fbfdfc 0%, var(--bg) 100%);
+    }
+
+    main {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 56px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 42px;
+      align-items: center;
+      min-height: 72vh;
+      padding: 48px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--teal-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 12ch;
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 5.8rem);
+      line-height: 0.94;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+      line-height: 1.7;
+    }
+
+    .lede {
+      max-width: 64ch;
+      margin-top: 22px;
+      font-size: 1.12rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      color: #ffffff;
+      background: var(--teal);
+      box-shadow: 0 14px 28px rgba(8, 127, 122, 0.22);
+    }
+
+    .button.primary:hover,
+    .button.primary:focus-visible {
+      background: var(--teal-dark);
+    }
+
+    .button.secondary {
+      color: var(--teal-dark);
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .version {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      margin-top: 24px;
+      padding: 0 12px;
+      border-radius: 999px;
+      color: var(--green);
+      background: #e7f5ed;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .icon-wrap {
+      display: grid;
+      justify-items: center;
+      gap: 18px;
+    }
+
+    .app-icon {
+      width: min(280px, 72vw);
+      aspect-ratio: 1;
+      border-radius: 30px;
+      box-shadow: 0 20px 44px rgba(22, 48, 45, 0.18);
+    }
+
+    .build-note {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface-soft);
+      color: var(--ink);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      display: grid;
+      gap: 10px;
+      min-height: 172px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: 0 12px 30px rgba(17, 67, 62, 0.07);
+    }
+
+    .card strong {
+      color: var(--teal-dark);
+      font-size: 0.94rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .download-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 22px;
+      padding: 24px;
+      border: 1px solid rgba(216, 155, 33, 0.35);
+      border-radius: 22px;
+      background: #fff9ea;
+    }
+
+    .download-panel p {
+      max-width: 70ch;
+    }
+
+    footer {
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 840px) {
+      main {
+        padding-top: 18px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 28px;
+      }
+
+      .icon-wrap {
+        order: -1;
+      }
+
+      .sections {
+        grid-template-columns: 1fr;
+      }
+
+      .download-panel {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">macOS Download</p>
+        <h1 id="page-title">Rally Connect Input CSV Maker</h1>
+        <p class="lede">
+          Build Rally Connect input CSV files from WhatsOn spreadsheets, avails, connector metadata,
+          CVP metadata, and optional metadata smart sheets.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_43.zip">Download V1.43 ZIP</a>
+          <a class="button secondary" href="https://github.com/MichaelBrandonFalk/rally-connect-input-csv-maker">View GitHub Repo</a>
+        </div>
+        <span class="version">Current version: V1.43</span>
+      </div>
+
+      <div class="icon-wrap">
+        <img class="app-icon" src="assets/rally-connect-input-csv-maker-icon.png" alt="Rally Connect Input CSV Maker app icon">
+        <p class="build-note">Signed, self-contained macOS app bundle packaged as a ZIP.</p>
+      </div>
+    </section>
+
+    <section class="sections" aria-label="App details">
+      <article class="card">
+        <strong>Main source</strong>
+        <h2>WhatsOn first</h2>
+        <p>The app starts from the WhatsOn spreadsheet, then applies connector, avails, CVP, and smart sheet data according to the configured priority rules.</p>
+      </article>
+      <article class="card">
+        <strong>Knowledge bases</strong>
+        <h2>Connector and CVP aware</h2>
+        <p>Bundled metadata helps populate IDs, titles, descriptions, source media, people, genres, ratings, and related fields when strict matches are found.</p>
+      </article>
+      <article class="card">
+        <strong>Outputs</strong>
+        <h2>CSV, workbook, warnings</h2>
+        <p>Exports the filled Rally input CSV, matching workbook, and a warning file for required fields or values that need review.</p>
+      </article>
+    </section>
+
+    <section class="download-panel" aria-label="Latest download">
+      <div>
+        <h2>Latest build: V1.43</h2>
+        <p>Released July 13, 2026. This build applies the custom pineapple beach icon to the macOS app bundle.</p>
+      </div>
+      <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_43.zip">Download ZIP</a>
+    </section>
+
+    <footer>
+      Keep older local app versions in place. New public builds will be added here as separate versioned downloads.
+    </footer>
+  </main>
+</body>
+</html>
