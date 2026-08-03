@@ -8,7 +8,7 @@ This site publishes only the mapping guide and mapping spreadsheet. It does not 
 
 Current mapping downloads:
 
-- `downloads/Rally Connect Input CSV Maker Mapping Guide V1_47.docx`
+- `downloads/Rally Connect Input CSV Maker Mapping Guide V1_47.pdf`
 - `downloads/Rally Connect Input CSV Maker Mapping Reference V1_47.xlsx`
 
 Description last updated: August 3, 2026.
