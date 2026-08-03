@@ -1,7 +1,15 @@
-# Rally Connect Input CSV Maker Downloads
+# Rally Connect Input CSV Maker Public Mapping Page
 
-Public download page for Rally Connect Input CSV Maker.
+Public reference page for Rally Connect Input CSV Maker mappings.
 
 Site URL: https://michaelbrandonfalk.github.io/rally-connect-input-csv-maker-downloads/
 
-Current download: `downloads/Rally Connect Input CSV Maker V1_43.zip`
+This site publishes only the mapping guide and mapping spreadsheet. It does not publish macOS app bundles, Connector/CVP knowledge-base databases, private source files, or generated outputs.
+
+Current mapping downloads:
+
+- `downloads/Rally Connect Input CSV Maker Mapping Guide V1_46.docx`
+- `downloads/Rally Connect Input CSV Maker Mapping Reference V1_46.xlsx`
+
+Description last updated: August 3, 2026.
+Mapping documents last updated: July 30, 2026 - V1.46.

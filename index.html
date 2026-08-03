@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rally Connect Input CSV Maker</title>
-  <meta name="description" content="Download Rally Connect Input CSV Maker for macOS.">
+  <title>Rally Connect Input CSV Maker Mapping Reference</title>
+  <meta name="description" content="Public mapping reference for Rally Connect Input CSV Maker. Download the mapping guide and field-by-field mapping spreadsheet.">
   <style>
     :root {
-      --bg: #f4f8f6;
+      --bg: #f5f8f6;
       --surface: #ffffff;
-      --surface-soft: #ecf6f4;
-      --ink: #16302d;
-      --muted: #5f6f6b;
+      --surface-soft: #edf5f2;
+      --ink: #17312d;
+      --muted: #61726e;
       --line: #c8ddd7;
       --teal: #087f7a;
       --teal-dark: #055d59;
-      --gold: #d89b21;
-      --green: #116a46;
-      --shadow: 0 22px 60px rgba(17, 67, 62, 0.13);
+      --gold: #c88a18;
+      --shadow: 0 18px 48px rgba(20, 64, 58, 0.1);
     }
 
     * {
@@ -30,31 +29,34 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        linear-gradient(135deg, rgba(8, 127, 122, 0.12), transparent 42%),
-        linear-gradient(180deg, #fbfdfc 0%, var(--bg) 100%);
+        linear-gradient(180deg, #fbfdfc 0%, var(--bg) 100%),
+        var(--bg);
     }
 
     main {
-      width: min(1080px, calc(100% - 32px));
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 42px 0 56px;
+      padding: 28px 0 48px;
     }
 
-    .hero {
+    .masthead {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 42px;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 24px;
       align-items: center;
-      min-height: 72vh;
-      padding: 48px;
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      background: rgba(255, 255, 255, 0.86);
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 8px;
       box-shadow: var(--shadow);
     }
 
     .eyebrow {
-      margin: 0 0 12px;
+      margin: 0 0 8px;
       color: var(--teal-dark);
       font-size: 0.82rem;
       font-weight: 800;
@@ -63,10 +65,10 @@
     }
 
     h1 {
-      max-width: 12ch;
+      max-width: 18ch;
       margin: 0;
-      font-size: clamp(2.6rem, 7vw, 5.8rem);
-      line-height: 0.94;
+      font-size: clamp(2.2rem, 5vw, 4.6rem);
+      line-height: 1;
       letter-spacing: 0;
     }
 
@@ -76,33 +78,39 @@
       letter-spacing: 0;
     }
 
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
     p {
       margin: 0;
       color: var(--muted);
-      font-size: 1.03rem;
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.65;
     }
 
     .lede {
-      max-width: 64ch;
-      margin-top: 22px;
+      max-width: 76ch;
+      margin-top: 18px;
       font-size: 1.12rem;
     }
 
-    .hero-actions {
+    .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 22px;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 999px;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
       font-weight: 800;
       text-decoration: none;
     }
@@ -110,7 +118,7 @@
     .button.primary {
       color: #ffffff;
       background: var(--teal);
-      box-shadow: 0 14px 28px rgba(8, 127, 122, 0.22);
+      box-shadow: 0 12px 24px rgba(8, 127, 122, 0.18);
     }
 
     .button.primary:hover,
@@ -124,113 +132,132 @@
       background: var(--surface);
     }
 
-    .version {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      margin-top: 24px;
-      padding: 0 12px;
-      border-radius: 999px;
-      color: var(--green);
-      background: #e7f5ed;
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    .icon-wrap {
-      display: grid;
-      justify-items: center;
-      gap: 18px;
-    }
-
-    .app-icon {
-      width: min(280px, 72vw);
-      aspect-ratio: 1;
-      border-radius: 30px;
-      box-shadow: 0 20px 44px rgba(22, 48, 45, 0.18);
-    }
-
-    .build-note {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface-soft);
-      color: var(--ink);
-      font-size: 0.95rem;
-      text-align: center;
-    }
-
-    .sections {
+    .meta-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 14px;
       margin-top: 22px;
     }
 
-    .card {
-      display: grid;
-      gap: 10px;
-      min-height: 172px;
-      padding: 22px;
+    .meta-item,
+    .panel,
+    .step,
+    .download-row {
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 8px;
       background: var(--surface);
-      box-shadow: 0 12px 30px rgba(17, 67, 62, 0.07);
+      box-shadow: 0 10px 28px rgba(20, 64, 58, 0.06);
     }
 
-    .card strong {
+    .meta-item {
+      padding: 14px;
+    }
+
+    .meta-item strong,
+    .step strong,
+    .scope-list strong {
+      display: block;
+      margin-bottom: 6px;
       color: var(--teal-dark);
-      font-size: 0.94rem;
-      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 850;
       letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .step {
+      min-height: 168px;
+      padding: 18px;
     }
 
     .download-panel {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      margin-top: 22px;
-      padding: 24px;
-      border: 1px solid rgba(216, 155, 33, 0.35);
-      border-radius: 22px;
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      border: 1px solid rgba(200, 138, 24, 0.34);
+      border-radius: 8px;
       background: #fff9ea;
     }
 
-    .download-panel p {
-      max-width: 70ch;
+    .download-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .panel {
+      padding: 18px;
+    }
+
+    .scope-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .scope-list li {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .notice {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-soft);
+      color: var(--ink);
+      font-size: 0.95rem;
+      line-height: 1.55;
     }
 
     footer {
-      margin-top: 34px;
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.92rem;
       text-align: center;
     }
 
-    @media (max-width: 840px) {
-      main {
-        padding-top: 18px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 28px;
-      }
-
-      .icon-wrap {
-        order: -1;
-      }
-
-      .sections {
+    @media (max-width: 900px) {
+      .masthead,
+      .meta-grid,
+      .steps,
+      .scope-grid,
+      .download-row {
         grid-template-columns: 1fr;
       }
 
-      .download-panel {
-        align-items: flex-start;
-        flex-direction: column;
+      .app-icon {
+        width: 84px;
+        height: 84px;
       }
 
       h1 {
@@ -241,66 +268,120 @@
 </head>
 <body>
   <main>
-    <section class="hero" aria-labelledby="page-title">
+    <header class="masthead">
+      <img class="app-icon" src="assets/rally-connect-input-csv-maker-icon.png" alt="Rally Connect Input CSV Maker app logo">
       <div>
-        <p class="eyebrow">macOS Download</p>
-        <h1 id="page-title">Rally Connect Input CSV Maker</h1>
+        <p class="eyebrow">Public mapping reference</p>
+        <h1>Rally Connect Input CSV Maker</h1>
         <p class="lede">
-          Build Rally Connect input CSV files from WhatsOn spreadsheets, avails, connector metadata,
-          CVP metadata, and optional metadata smart sheets.
+          This page explains how the internal app maps WhatsOn, Avails, Connector, CVP, and Metadata Smart Sheet sources into the Rally Connect input CSV format.
+          Only the mapping documents are published here.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_46.zip">Download V1.46 ZIP</a>
-          <a class="button secondary" href="https://github.com/MichaelBrandonFalk/rally-connect-input-csv-maker">View GitHub Repo</a>
+        <div class="actions" aria-label="Mapping downloads">
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Guide%20V1_46.docx">Download Mapping Guide</a>
+          <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Reference%20V1_46.xlsx">Download Mapping Spreadsheet</a>
         </div>
-        <span class="version">Current version: V1.46</span>
       </div>
+    </header>
 
-      <div class="icon-wrap">
-        <img class="app-icon" src="assets/rally-connect-input-csv-maker-icon.png" alt="Rally Connect Input CSV Maker app icon">
-        <p class="build-note">Signed, self-contained macOS app bundle packaged as a ZIP.</p>
+    <section class="meta-grid" aria-label="Update information">
+      <div class="meta-item">
+        <strong>Description updated</strong>
+        <p>August 3, 2026</p>
+      </div>
+      <div class="meta-item">
+        <strong>Mapping updated</strong>
+        <p>July 30, 2026 - V1.46</p>
+      </div>
+      <div class="meta-item">
+        <strong>Latest mapping change</strong>
+        <p>WhatsOn Cast (sorted) maps to the first four actor fields and matching actor order fields.</p>
       </div>
     </section>
 
-    <section class="sections" aria-label="App details">
-      <article class="card">
-        <strong>Main source</strong>
-        <h2>WhatsOn first</h2>
-        <p>The app starts from the WhatsOn spreadsheet, then applies connector, avails, CVP, and smart sheet data according to the configured priority rules.</p>
-      </article>
-      <article class="card">
-        <strong>Knowledge bases</strong>
-        <h2>Connector and CVP aware</h2>
-        <p>Bundled metadata helps populate IDs, titles, descriptions, source media, people, genres, ratings, and related fields when strict matches are found.</p>
-      </article>
-      <article class="card">
-        <strong>Outputs</strong>
-        <h2>CSV, workbook, warnings</h2>
-        <p>Exports the filled Rally input CSV, matching workbook, and a warning file for required fields or values that need review.</p>
-      </article>
+    <section class="section" aria-labelledby="how-it-works">
+      <div class="section-heading">
+        <h2 id="how-it-works">How The App Works</h2>
+        <p>The app creates Rally Connect input files by starting with the main WhatsOn spreadsheet and then applying optional, strictly matched enrichment sources.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <strong>1. Start With WhatsOn</strong>
+          <p>Rows are created from the WhatsOn input. Direct fields, known aliases, titles, descriptions, categories, dates, ratings, cast, SKUs, and IDs are mapped first.</p>
+        </article>
+        <article class="step">
+          <strong>2. Match Connector</strong>
+          <p>The Connector knowledge base links external references, NewSku values, parent IDs, source media paths, and CVP identifiers when strict matches are available.</p>
+        </article>
+        <article class="step">
+          <strong>3. Apply Avails And CVP</strong>
+          <p>Avails supplies VOD date windows and selected IDs. CVP Metadata can enrich matched rows with descriptions, people, genres, ratings, keywords, dates, and GUIDs.</p>
+        </article>
+        <article class="step">
+          <strong>4. Export With Warnings</strong>
+          <p>The app writes the filled CSV/workbook and a warning report for required blanks, invalid values, SKU conflicts, and review-needed metadata.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="download-panel" aria-label="Latest download">
-      <div>
-        <h2>Latest build: V1.46</h2>
-        <p>Released July 30, 2026. This build maps WhatsOn Cast (sorted) values into the first four actor name and actor order fields.</p>
+    <section class="section" aria-labelledby="downloads">
+      <div class="download-panel">
+        <div class="section-heading">
+          <h2 id="downloads">Download The Current Mappings</h2>
+          <p>The downloadable files describe source priorities, exact WhatsOn field names, aliases, transforms, knowledge-base behavior, defaults, and warning rules.</p>
+        </div>
+        <div class="download-row">
+          <div>
+            <h3>Readable Mapping Guide</h3>
+            <p>DOCX summary intended for review and sharing. Last mapping update: July 30, 2026 - V1.46.</p>
+          </div>
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Guide%20V1_46.docx">Download DOCX</a>
+        </div>
+        <div class="download-row">
+          <div>
+            <h3>Field-By-Field Mapping Spreadsheet</h3>
+            <p>XLSX reference with each output field, source priority, behavior, and details. Last mapping update: July 30, 2026 - V1.46.</p>
+          </div>
+          <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Reference%20V1_46.xlsx">Download XLSX</a>
+        </div>
       </div>
-      <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_46.zip">Download ZIP</a>
     </section>
 
-    <section class="download-panel" aria-label="Mapping documentation">
-      <div>
-        <h2>Mapping and Transform Reference</h2>
-        <p>Download the readable mapping guide or the full field-by-field spreadsheet showing source priorities, aliases, transforms, knowledge-base behavior, and warning rules.</p>
+    <section class="section" aria-labelledby="scope">
+      <div class="section-heading">
+        <h2 id="scope">What Is Published Here</h2>
+        <p>This is a public reference page, not an app distribution page.</p>
       </div>
-      <div class="hero-actions">
-        <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Guide%20V1_46.docx">Download DOCX</a>
-        <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Reference%20V1_46.xlsx">Download XLSX</a>
+      <div class="scope-grid">
+        <div class="panel">
+          <strong>Included</strong>
+          <ul class="scope-list">
+            <li>App logo for identification.</li>
+            <li>Plain-language app workflow description.</li>
+            <li>Current mapping guide and mapping spreadsheet downloads.</li>
+            <li>Visible description and mapping update dates.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <strong>Not Included</strong>
+          <ul class="scope-list">
+            <li>No macOS app bundles or installers.</li>
+            <li>No Connector or CVP knowledge-base database files.</li>
+            <li>No source spreadsheets, JSON metadata exports, or generated customer output files.</li>
+            <li>No private operational configuration.</li>
+          </ul>
+        </div>
       </div>
+    </section>
+
+    <section class="section">
+      <p class="notice">
+        The local desktop app has the same current Show Mappings logic as the downloadable V1.46 mapping reference. Public downloads on this page are limited to mapping documentation.
+      </p>
     </section>
 
     <footer>
-      Keep older local app versions in place. New public builds will be added here as separate versioned downloads.
+      Description last updated August 3, 2026. Mapping documents last updated July 30, 2026 - V1.46.
     </footer>
   </main>
 </body>
