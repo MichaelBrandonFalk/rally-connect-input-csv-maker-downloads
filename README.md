@@ -11,5 +11,5 @@ Current mapping downloads:
 - `downloads/Rally Connect Input CSV Maker Mapping Guide V1_49.pdf`
 - `downloads/Rally Connect Input CSV Maker Mapping Reference V1_49.xlsx`
 
-Description last updated: August 5, 2026.
+Description last updated: August 11, 2026 - V1.50.
 Mapping documents last updated: August 5, 2026 - V1.49.

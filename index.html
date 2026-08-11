@@ -274,7 +274,7 @@
         <p class="eyebrow">Public mapping reference</p>
         <h1>Rally Connect Input CSV Maker</h1>
         <p class="lede">
-          This page explains how the internal app maps WhatsOn, Avails, Connector, CVP, and Metadata Smart Sheet sources into the Rally Connect input CSV format.
+          This page explains how the internal app maps WhatsOn, Avails, Connector, CVP, and Metadata Smart Sheet sources into the Rally Connect input CSV format, and how generated CSVs can be checked with the Validator tab.
           Only the mapping documents are published here.
         </p>
         <div class="actions" aria-label="Mapping downloads">
@@ -287,7 +287,7 @@
     <section class="meta-grid" aria-label="Update information">
       <div class="meta-item">
         <strong>Description updated</strong>
-        <p>August 5, 2026</p>
+        <p>August 11, 2026 - V1.50</p>
       </div>
       <div class="meta-item">
         <strong>Mapping updated</strong>
@@ -320,6 +320,10 @@
         <article class="step">
           <strong>4. Export With Warnings</strong>
           <p>The app writes the filled CSV/workbook and a warning report for required blanks, invalid values, SKU conflicts, and review-needed metadata.</p>
+        </article>
+        <article class="step">
+          <strong>5. Validate A CSV</strong>
+          <p>The Validator tab accepts one generated CSV, checks the template schema and required columns, and writes a fresh warning report.</p>
         </article>
       </div>
     </section>
@@ -376,12 +380,12 @@
 
     <section class="section">
       <p class="notice">
-        The local desktop app has the same current Show Mappings logic as the downloadable V1.49 mapping reference. Public downloads on this page are limited to mapping documentation.
+        The V1.50 local desktop app adds CSV validation while keeping the same current Show Mappings logic as the downloadable V1.49 mapping reference. Public downloads on this page are limited to mapping documentation.
       </p>
     </section>
 
     <footer>
-      Description last updated August 5, 2026. Mapping documents last updated August 5, 2026 - V1.49.
+      Description last updated August 11, 2026 - V1.50. Mapping documents last updated August 5, 2026 - V1.49.
     </footer>
   </main>
 </body>
