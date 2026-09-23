@@ -8,12 +8,12 @@ This site publishes the current macOS app zip plus the mapping guide and mapping
 
 Current app download:
 
-- `downloads/Rally Connect Input CSV Maker V1_52.zip`
+- `downloads/Rally Connect Input CSV Maker V1_53.zip`
 
 Current mapping downloads:
 
-- `downloads/Rally Connect Input CSV Maker Mapping Guide V1_52.pdf`
-- `downloads/Rally Connect Input CSV Maker Mapping Reference V1_52.xlsx`
+- `downloads/Rally Connect Input CSV Maker Mapping Guide V1_53.pdf`
+- `downloads/Rally Connect Input CSV Maker Mapping Reference V1_53.xlsx`
 
-Description last updated: September 2, 2026 - V1.52.
-Mapping documents last updated: September 2, 2026 - V1.52.
+Description last updated: September 23, 2026 - V1.53.
+Mapping documents last updated: September 23, 2026 - V1.53.
