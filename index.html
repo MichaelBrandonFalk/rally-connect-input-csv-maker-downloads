@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rally Connect Input CSV Maker Downloads</title>
-  <meta name="description" content="Public downloads and mapping reference for Rally Connect Input CSV Maker. Download the macOS app, mapping guide, and field-by-field mapping spreadsheet.">
+  <meta name="description" content="Public downloads and mapping reference for Rally Connect Input CSV Maker. Download the macOS, Windows, or Linux Mint app plus the current mapping documentation.">
+  <link rel="icon" type="image/png" href="assets/rally-connect-input-csv-maker-icon.png">
   <style>
     :root {
       --bg: #f5f8f6;
@@ -204,6 +205,13 @@
       box-shadow: none;
     }
 
+    .download-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
     .scope-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -263,6 +271,10 @@
       h1 {
         max-width: 100%;
       }
+
+      .download-actions {
+        justify-content: flex-start;
+      }
     }
   </style>
 </head>
@@ -275,12 +287,14 @@
         <h1>Rally Connect Input CSV Maker</h1>
         <p class="lede">
           This page explains how the internal app maps WhatsOn, Avails, Connector, CVP, and Metadata Smart Sheet sources into the Rally Connect input CSV format, and how generated CSVs can be checked with the Validator tab.
-          The current macOS app and mapping documents are published here.
+          Self-contained macOS, Windows, and Linux Mint builds and the current mapping documents are published here.
         </p>
         <div class="actions" aria-label="Downloads">
-          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_54.zip">Download Mac App V1.54</a>
-          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Guide%20V1_54.pdf">Download Mapping Guide</a>
-          <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Reference%20V1_54.xlsx">Download Mapping Spreadsheet</a>
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_55%20macOS%20Apple%20Silicon.zip">Mac App V1.55</a>
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1.55%20Windows%20x64.zip">Windows App V1.55</a>
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1.55%20Linux%20Mint%20amd64.deb">Linux Mint App V1.55</a>
+          <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Guide%20V1_55.pdf">Mapping Guide</a>
+          <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Reference%20V1_55.xlsx">Mapping Spreadsheet</a>
         </div>
       </div>
     </header>
@@ -288,15 +302,15 @@
     <section class="meta-grid" aria-label="Update information">
       <div class="meta-item">
         <strong>Description updated</strong>
-        <p>October 9, 2026 - V1.54</p>
+        <p>October 14, 2026 - V1.55</p>
       </div>
       <div class="meta-item">
         <strong>Mapping updated</strong>
-        <p>October 9, 2026 - V1.54</p>
+        <p>October 14, 2026 - V1.55</p>
       </div>
       <div class="meta-item">
         <strong>Latest app change</strong>
-        <p>WhatsOn Production company (single) now maps to both studio and productionCompany.</p>
+        <p>Added self-contained Windows x64 and Linux Mint x64 packages, each built and GUI-tested on its native operating system.</p>
       </div>
     </section>
 
@@ -333,28 +347,45 @@
       <div class="download-panel">
         <div class="section-heading">
           <h2 id="downloads">Download The App And Current Mappings</h2>
-          <p>The macOS app is available as a zip. The mapping files describe source priorities, exact WhatsOn field names, aliases, transforms, knowledge-base behavior, defaults, and warning rules.</p>
+          <p>Choose the package for your operating system. The mapping files describe source priorities, exact WhatsOn field names, aliases, transforms, knowledge-base behavior, defaults, and warning rules.</p>
         </div>
         <div class="download-row">
           <div>
-            <h3>macOS App</h3>
-            <p>Current desktop app build. App update: October 9, 2026 - V1.54. Production company (single) maps to both studio and productionCompany.</p>
+            <h3>macOS App - Apple Silicon</h3>
+            <p>V1.55 for Apple Silicon Macs. The app is self-contained, ad-hoc signed, and does not depend on Homebrew or a local Python environment.</p>
           </div>
-          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_54.zip">Download ZIP</a>
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1_55%20macOS%20Apple%20Silicon.zip">Download ZIP</a>
+        </div>
+        <div class="download-row">
+          <div>
+            <h3>Windows App - x64</h3>
+            <p>V1.55 for 64-bit Windows 10 and 11. Extract the complete folder before running the EXE. Windows SmartScreen may warn because the app is not commercially code-signed.</p>
+          </div>
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1.55%20Windows%20x64.zip">Download ZIP</a>
+        </div>
+        <div class="download-row">
+          <div>
+            <h3>Linux Mint App - x64</h3>
+            <p>V1.55 for 64-bit Linux Mint 21 and 22. Use the Debian package for normal installation or the portable archive when installation is not available.</p>
+          </div>
+          <div class="download-actions">
+            <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1.55%20Linux%20Mint%20amd64.deb">Download DEB</a>
+            <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20V1.55%20Linux%20Mint%20x64.tar.gz">Portable TAR.GZ</a>
+          </div>
         </div>
         <div class="download-row">
           <div>
             <h3>Readable Mapping Guide</h3>
-            <p>Readable PDF summary with larger text, workflow notes, source priority, warning rules, and grouped transformations. Last mapping update: October 9, 2026 - V1.54.</p>
+            <p>Readable PDF summary with larger text, workflow notes, source priority, warning rules, and grouped transformations. Last mapping update: October 14, 2026 - V1.55.</p>
           </div>
-          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Guide%20V1_54.pdf">Download PDF</a>
+          <a class="button primary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Guide%20V1_55.pdf">Download PDF</a>
         </div>
         <div class="download-row">
           <div>
             <h3>Field-By-Field Mapping Spreadsheet</h3>
-            <p>XLSX reference with each output field, source priority, behavior, details, and transform/formula logic. Last mapping update: October 9, 2026 - V1.54.</p>
+            <p>XLSX reference with each output field, source priority, behavior, details, and transform/formula logic. Last mapping update: October 14, 2026 - V1.55.</p>
           </div>
-          <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Reference%20V1_54.xlsx">Download XLSX</a>
+          <a class="button secondary" href="downloads/Rally%20Connect%20Input%20CSV%20Maker%20Mapping%20Reference%20V1_55.xlsx">Download XLSX</a>
         </div>
       </div>
     </section>
@@ -362,7 +393,7 @@
     <section class="section" aria-labelledby="scope">
       <div class="section-heading">
         <h2 id="scope">What Is Published Here</h2>
-        <p>This page publishes the current macOS app package and public mapping documentation.</p>
+        <p>This page publishes the current macOS, Windows, and Linux Mint app packages and public mapping documentation.</p>
       </div>
       <div class="scope-grid">
         <div class="panel">
@@ -370,7 +401,7 @@
           <ul class="scope-list">
             <li>App logo for identification.</li>
             <li>Plain-language app workflow description.</li>
-            <li>Current macOS app zip download.</li>
+            <li>Current macOS, Windows, and Linux Mint app downloads.</li>
             <li>Current mapping guide and mapping spreadsheet downloads.</li>
             <li>Visible description and mapping update dates.</li>
           </ul>
@@ -388,12 +419,12 @@
 
     <section class="section">
       <p class="notice">
-        The V1.54 local desktop app keeps All except Truth selected and CVP Metadata off at startup. It maps Production company (single) to both studio and productionCompany while preserving the existing WhatsOn aliases.
+        V1.55 keeps All except Truth selected and CVP Metadata off at startup. The three desktop packages contain the same mapping logic and bundled knowledge bases; raw database files are not published separately.
       </p>
     </section>
 
     <footer>
-      Description last updated October 9, 2026 - V1.54. Mapping documents last updated October 9, 2026 - V1.54.
+      Description last updated October 14, 2026 - V1.55. Mapping documents last updated October 14, 2026 - V1.55.
     </footer>
   </main>
 </body>
