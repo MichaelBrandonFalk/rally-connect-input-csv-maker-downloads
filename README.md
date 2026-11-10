@@ -8,15 +8,15 @@ This site publishes the current macOS, Windows, and Linux Mint app packages plus
 
 Current app download:
 
-- `downloads/Rally Connect Input CSV Maker V1_56 macOS Apple Silicon.zip`
-- `downloads/Rally Connect Input CSV Maker V1.56 Windows x64.zip`
-- `downloads/Rally Connect Input CSV Maker V1.56 Linux Mint amd64.deb`
-- `downloads/Rally Connect Input CSV Maker V1.56 Linux Mint x64.tar.gz`
+- `downloads/Rally Connect Input CSV Maker V1_57 macOS Apple Silicon.zip`
+- `downloads/Rally Connect Input CSV Maker V1.57 Windows x64.zip`
+- `downloads/Rally Connect Input CSV Maker V1.57 Linux Mint amd64.deb`
+- `downloads/Rally Connect Input CSV Maker V1.57 Linux Mint x64.tar.gz`
 
 Current mapping downloads:
 
-- `downloads/Rally Connect Input CSV Maker Mapping Guide V1_56.pdf`
-- `downloads/Rally Connect Input CSV Maker Mapping Reference V1_56.xlsx`
+- `downloads/Rally Connect Input CSV Maker Mapping Guide V1_57.pdf`
+- `downloads/Rally Connect Input CSV Maker Mapping Reference V1_57.xlsx`
 
-Description last updated: October 20, 2026 - V1.56.
-Mapping documents last updated: October 20, 2026 - V1.56.
+Description last updated: November 9, 2026 - V1.57.
+Mapping documents last updated: November 9, 2026 - V1.57.
